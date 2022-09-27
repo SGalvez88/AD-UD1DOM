@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<Empleados>
+    <empleado>
+        <id>1</id>
+        <apellido>Fernandez</apellido>
+        <dep>10</dep>
+        <salario>1000.45</salario>
+    </empleado>
+    <empleado>
+        <id>2</id>
+        <apellido>Sanz</apellido>
+        <dep>12</dep>
+        <salario>12500</salario>
+    </empleado>
+    <empleado>
+        <id>3</id>
+        <apellido>Cuadri</apellido>
+        <dep>5</dep>
+        <salario>2000.45</salario>
+    </empleado>
+</Empleados>
+
