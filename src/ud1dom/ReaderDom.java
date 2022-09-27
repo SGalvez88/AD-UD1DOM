@@ -31,11 +31,13 @@ public class ReaderDom {
         DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
 
         try {
-            DocumentBuilder builder = documentBuilderFactory.newDocumentBuilder();
+            DocumentBuilder documentBuilder = documentBuilderFactory.newDocumentBuilder();
             /**
              * Creamos un documento a partir del fichero de nombre empleados.xml
              */
-            Document document = builder.parse(new File("src\\ud1dom\\empleados.xml"));
+            File file = new File("src\\ud1dom\\empleados.xml");
+            Document document = documentBuilder.parse(file);
+            
             /**
              * El método accede al nodo raíz del documento 
              * y el método normalice elimina los nodos vacíos y combina adyacentes
@@ -65,6 +67,7 @@ public class ReaderDom {
                  * etiquetas utilizadas.
                  */
                 if (nodoEmpleado.getNodeType() == Node.ELEMENT_NODE) {
+                    
                     Element elementoEmpleado = (Element) nodoEmpleado;
 
                     System.out.println("Id: " + elementoEmpleado.getElementsByTagName("id").item(0).getTextContent());
